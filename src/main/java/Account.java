@@ -14,6 +14,7 @@ public class Account {
     }
 
     public void withdrawal(int amount) {
+        assert Integer.signum(amount) ==1;
         balance -= amount;
     }
 }

@@ -45,4 +45,11 @@ public class AccountTest {
         account.withdrawal(1);
         assertThat(account.getBalance()).isEqualTo(-2);
     }
+    @Test
+    public void withdrawalZero() {
+        Account account = new Account();
+        assertThatThrownBy(() ->
+                account.withdrawal(0)
+        ).isInstanceOf(AssertionError.class);
+    }
 }
