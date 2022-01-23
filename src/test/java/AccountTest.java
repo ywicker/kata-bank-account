@@ -52,4 +52,11 @@ public class AccountTest {
                 account.withdrawal(0)
         ).isInstanceOf(AssertionError.class);
     }
+    @Test
+    public void withdrawalNegativeAmount() {
+        Account account = new Account();
+        assertThatThrownBy(() ->
+                account.withdrawal(-1)
+        ).isInstanceOf(AssertionError.class);
+    }
 }
