@@ -75,4 +75,14 @@ public class AccountTest {
                         dateFormat.parse("2022-01-01 00:00:00"))
         ).hasSize(0);
     }
+    @Test
+    public void generateAccountStatementWithOneOperation() throws ParseException {
+        Account account = new Account();
+        account.deposit(createAmount(1));
+        assertThat(
+                account.generateAccountStatement(
+                        dateFormat.parse("2021-01-01 00:00:00"),
+                        dateFormat.parse("2022-01-01 00:00:00"))
+        ).hasSize(1);
+    }
 }
