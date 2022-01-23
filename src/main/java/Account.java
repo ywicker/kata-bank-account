@@ -1,20 +1,20 @@
+import kata.bank.account.Amount;
+
 public class Account {
-    int balance;
+    private int balance;
     public Account() {
         this.balance = 0;
     }
 
-    public void deposit(int amount) {
-        assert Integer.signum(amount) ==1;
-        balance += amount;
+    public void deposit(final Amount amount) {
+        balance += amount.getValue();
     }
 
     public int getBalance() {
         return balance;
     }
 
-    public void withdrawal(int amount) {
-        assert Integer.signum(amount) ==1;
-        balance -= amount;
+    public void withdrawal(final Amount amount) {
+        balance -= amount.getValue();
     }
 }
