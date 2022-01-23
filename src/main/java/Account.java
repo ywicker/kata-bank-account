@@ -5,6 +5,7 @@ public class Account {
     }
 
     public void deposit(int i) {
+        assert i!=0;
         balance += i;
     }
 
