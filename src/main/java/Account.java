@@ -4,9 +4,9 @@ public class Account {
         this.balance = 0;
     }
 
-    public void deposit(int i) {
-        assert i!=0;
-        balance += i;
+    public void deposit(int amount) {
+        assert Integer.signum(amount) ==1;
+        balance += amount;
     }
 
     public int getBalance() {
