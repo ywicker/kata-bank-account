@@ -26,4 +26,12 @@ public class Operation {
     public int hashCode() {
         return Objects.hash(operationDate, amount, type);
     }
+
+    public OperationType getType() {
+        return this.type;
+    }
+
+    public Amount getAmount() {
+        return this.amount;
+    }
 }
