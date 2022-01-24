@@ -8,6 +8,7 @@ import java.util.Date;
 import java.util.List;
 
 import static kata.bank.account.OperationType.DEPOSIT;
+import static kata.bank.account.OperationType.WITHDRAWAL;
 
 public class Account {
     private int balance;
@@ -37,7 +38,7 @@ public class Account {
         operations.add(new Operation(
                 dateProvider.getDate(),
                 amount,
-                DEPOSIT));
+                WITHDRAWAL));
     }
 
     public List<Operation> generateAccountStatement(final Date startDate, final Date endDate) {
